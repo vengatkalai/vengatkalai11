@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <marquee>Know your Eb bill !</marquee>
+        <h1>EB bill chechking!</h1>
+        <label for="">Unit:</label>
+        <input type="number" id="txt" placeholder="Enter unit" value><br><br>
+        <button onclick="cal()">Know Your EB Bill</button>
+        <p id="demo"></p>
+        
+    <script>
+        //EB bill task...
+        function cal() {
+            var unit = document.getElementById("txt").value
+            var output = "your EB amount is ";
+            var amount = 0
+            if (unit <= 100) {
+                amount = 0;
+            }
+            else if (unit >= 101 && unit<=300) {
+                amount = (unit - 100) * 2;
+            }
+            else {
+                amount = unit*4;
+            }
+            document.getElementById("demo").innerHTML = ( output +" Rs:"+ amount );
+        }
+    </script>
+</body>
+
+</html>
